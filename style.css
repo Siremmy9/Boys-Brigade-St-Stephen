@@ -965,6 +965,7 @@ ul {
 
 /* ============
    PROGRAMS
+   footer-bottom
 ============ */
 
 .program-grid {
@@ -2273,6 +2274,7 @@ ul {
   display: flex;
 
   justify-content: space-between;
+  align-items: center;
 
   gap: 20px;
 
