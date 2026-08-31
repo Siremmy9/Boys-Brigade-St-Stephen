@@ -1,9 +1,3 @@
-/* ========================================================
-   VARIABLES
-   motto
-   leader-image
-========================================================= */
-
 :root {
   --primary: #0f2a44;
   --primary-light: #163d60;
@@ -60,10 +54,6 @@ body.dark {
   background: #0b1120;
   color: #e5e7eb;
 }
-
-/* =========================================================
-   RESET
-========================================================= */
 
 * {
   margin: 0;
@@ -145,8 +135,12 @@ ul {
   align-self: center;
 }
 
+.abt_us {
+  margin-bottom: 3rem;
+}
+
 /* =========================================================
-   SECTION
+   SECTION leader-card
 ========================================================= */
 
 .section {
@@ -918,14 +912,21 @@ ul {
   box-shadow: var(--shadow-sm);
 }
 
+.leader-card:hover {
+  background: linear-gradient(90deg, #0206dd60, #05001f);
+  box-shadow: 0px 5px 15px #00ffff80;
+  transition: 0.3s;
+}
+
 .leader-image {
   position: relative;
-
   overflow: hidden;
 }
 
 .leader-image img {
+  padding: 1rem;
   height: 550px;
+  border-radius: 2rem;
 
   transition: 0.5s ease;
 }
