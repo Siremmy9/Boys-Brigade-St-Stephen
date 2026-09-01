@@ -340,7 +340,7 @@ ul {
 }
 
 /* ============
-   NAVBAR
+   NAVBAR 
 ============ */
 
 .header {
@@ -357,7 +357,7 @@ ul {
   transition: var(--transition);
 }
 
-.header.scrolled {
+.header. {
   background: rgba(15, 42, 68, 0.95);
 
   backdrop-filter: blur(15px);
@@ -2289,6 +2289,7 @@ ul {
 
 /* =====
    REVEAL ANIMATION
+   preloader
 ===== */
 
 .reveal {

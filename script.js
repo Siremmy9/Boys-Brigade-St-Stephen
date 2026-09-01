@@ -1,12 +1,3 @@
-/* =========================================================
-   BOYS' BRIGADE WEBSITE
-   Main JavaScript
-========================================================= */
-
-/* =========================================================
-   ELEMENTS
-========================================================= */
-
 const body = document.body;
 
 const header = document.getElementById("header");
@@ -23,9 +14,11 @@ const backToTop = document.getElementById("back-to-top");
 
 const preloader = document.getElementById("preloader");
 
-/* =========================================================
+/* ===
    PRELOADER
-========================================================= */
+
+   countdown
+=== */
 
 window.addEventListener("load", () => {
   setTimeout(() => {
@@ -33,9 +26,7 @@ window.addEventListener("load", () => {
   }, 500);
 });
 
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
+//  MOBILE NAVIGATION
 
 hamburger.addEventListener("click", () => {
   const isOpen = hamburger.classList.toggle("active");
@@ -76,9 +67,9 @@ document.addEventListener("click", (event) => {
   }
 });
 
-/* =========================================================
+/* ===
    HEADER ON SCROLL
-========================================================= */
+*/
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
@@ -88,9 +79,9 @@ window.addEventListener("scroll", () => {
   }
 });
 
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
+/*
+ ACTIVE NAVIGATION
+*/
 
 const sections = document.querySelectorAll("main section[id]");
 
@@ -120,10 +111,8 @@ const updateActiveNav = () => {
 
 window.addEventListener("scroll", updateActiveNav);
 
-/* =========================================================
-   DARK MODE
-========================================================= */
-
+/*
+ DARK MODE */
 const savedTheme = localStorage.getItem("bb-theme");
 
 if (savedTheme === "dark") {
@@ -152,9 +141,9 @@ themeToggle.addEventListener("click", () => {
   updateThemeIcon();
 });
 
-/* =========================================================
+/* ===
    SCROLL REVEAL
-========================================================= */
+=== */
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -177,9 +166,9 @@ revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
 
-/* =========================================================
+/* ===
    BACK TO TOP
-========================================================= */
+=== */
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 600) {
@@ -196,9 +185,9 @@ backToTop.addEventListener("click", () => {
   });
 });
 
-/* =========================================================
+/* ===
    COUNTDOWN
-========================================================= */
+ */
 
 const countdown = document.getElementById("countdown");
 
@@ -230,7 +219,7 @@ if (countdown) {
       return;
     }
 
-    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const days = Math.floor(difference / (1000 * 64 * 64 * 24));
 
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
 
@@ -252,9 +241,9 @@ if (countdown) {
   setInterval(updateCountdown, 1000);
 }
 
-/* =========================================================
+/* 
    ANIMATED COUNTERS
-========================================================= */
+ */
 
 const counters = document.querySelectorAll(".counter");
 
@@ -301,9 +290,9 @@ counters.forEach((counter) => {
   counterObserver.observe(counter);
 });
 
-/* =========================================================
+/* 
    GALLERY FILTER
-========================================================= */
+ */
 
 const filterButtons = document.querySelectorAll(".filter-btn");
 
@@ -331,9 +320,9 @@ filterButtons.forEach((button) => {
   });
 });
 
-/* =========================================================
+/* ===
    GALLERY LIGHTBOX
-========================================================= */
+=== */
 
 const lightbox = document.getElementById("lightbox");
 
@@ -424,9 +413,9 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-/* =========================================================
+/* ===
    TESTIMONIAL SLIDER
-========================================================= */
+=== */
 
 const testimonials = document.querySelectorAll(".testimonial");
 
@@ -491,9 +480,9 @@ setInterval(() => {
   showTestimonial(testimonialIndex);
 }, 7000);
 
-/* =========================================================
+/* ===
    FAQ ACCORDION
-========================================================= */
+=== */
 
 const faqItems = document.querySelectorAll(".faq-item");
 
@@ -513,21 +502,25 @@ faqItems.forEach((item) => {
   });
 });
 
-/* =========================================================
+/* ===
    VERSE OF THE WEEK
-========================================================= */
+=== */
 
 const verses = [
   {
-    text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
+    text: "Which hope we have as an anchor of the soul, both Sure and Steadfast, and which entereth into that within the veil.",
 
-    reference: "Joshua 1:9",
+    reference: "Hebrews 6:19",
   },
-
   {
     text: "I can do all things through Christ who strengthens me.",
 
     reference: "Philippians 4:13",
+  },
+  {
+    text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
+
+    reference: "Joshua 1:9",
   },
 
   {
@@ -559,9 +552,9 @@ newVerseButton.addEventListener("click", () => {
   verseReference.textContent = selectedVerse.reference;
 });
 
-/* =========================================================
+/* ===
    CONTACT FORM VALIDATION
-========================================================= */
+=== */
 
 const contactForm = document.getElementById("contact-form");
 
@@ -646,9 +639,9 @@ if (contactForm) {
   });
 }
 
-/* =========================================================
+/* ===
    CURRENT YEAR
-========================================================= */
+ */
 
 const currentYear = document.getElementById("current-year");
 
@@ -656,9 +649,9 @@ if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
 
-/* =========================================================
+/* 
    SYSTEM DARK MODE
-========================================================= */
+ */
 
 if (!localStorage.getItem("bb-theme")) {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -670,9 +663,9 @@ if (!localStorage.getItem("bb-theme")) {
   }
 }
 
-/* =========================================================
+/* 
    ESCAPE KEY FOR MOBILE MENU
-========================================================= */
+=== */
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
