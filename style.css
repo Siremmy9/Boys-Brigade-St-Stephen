@@ -226,7 +226,7 @@ ul {
 }
 
 /* =========================================================
-   BUTTONS
+   BUTTONS events-grid_upcoming
 ========================================================= */
 
 .btn {
@@ -357,7 +357,7 @@ ul {
   transition: var(--transition);
 }
 
-.header. {
+.header {
   background: rgba(15, 42, 68, 0.95);
 
   backdrop-filter: blur(15px);
@@ -1087,6 +1087,11 @@ ul {
 /* ============
    EVENTS
 ============ */
+
+.events-grid_upcoming {
+  padding: 30px;
+  width: 50%;
+}
 
 .events-grid {
   display: grid;
